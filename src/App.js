@@ -56,7 +56,7 @@ export default function App() {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 5]} />
       <pointLight position={[-10, -10, -5]} />
-      <Physics gravity={[0, -30, 0]} defaultContactMaterial={{ restitution: 1.1 }}>
+      <Physics gravity={[0, -20, 0]} defaultContactMaterial={{ restitution: 1.1 }}>
         <Ball />
         <Paddle />
         <Enemy color="red" position={[3, 5, 0]} />
