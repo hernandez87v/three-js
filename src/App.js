@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon';
 // import './App.css';
@@ -41,7 +41,7 @@ function Paddle({ args = [2, 0.5, 1] }) {
 }
 
 function Enemy({ args = [2, 0.5, 1], color, ...props }) {
-  const [ref, api] = useBox(() => ({ args, ...props }))
+  const [ref] = useBox(() => ({ args, ...props }))
   return (
     <mesh ref={ref}>
       <boxBufferGeometry args={args} />
