@@ -6,6 +6,10 @@ import './App.css';
 function App() {
   return (
     <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
+      <ambientLight intensity={0.3} />
+      <pointLight position={[10, 10, 5]} />
+      <pointLight position={[10, 10, 5]} />
+      <pointLight position={[-10, -10, -5]} />
       <mesh>
         <sphereBufferGeometry />
         <meshStandardMaterial color="blue" />
