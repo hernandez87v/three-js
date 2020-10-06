@@ -30,11 +30,22 @@ function Paddle({ args = [2, 0.5, 1] }) {
 
   useFrame((state) => {
     api.position.set(state.mouse.x * state.viewport.width / 2, -state.viewport.height / 2, 0)
+    api.rotation.set(0, 0, 0)
   })
   return (
     <mesh ref={ref}>
       <boxBufferGeometry args={args} />
       <meshStandardMaterial color="white" />
+    </mesh>
+  )
+}
+
+function Enemy({ args = [2, 0.5, 1], color, ...props }) {
+  const [ref, api] = useBox(() => ({ args, ...props }))
+  return (
+    <mesh ref={ref}>
+      <boxBufferGeometry args={args} />
+      <meshStandardMaterial color={color} />
     </mesh>
   )
 }
@@ -48,6 +59,10 @@ export default function App() {
       <Physics gravity={[0, -30, 0]} defaultContactMaterial={{ restitution: 1.1 }}>
         <Ball />
         <Paddle />
+        <Enemy color="red" position={[3, 5, 0]} />
+        <Enemy color="cyan" position={[-3, 5, 0]} />
+        <Enemy color="grey" position={[5, 3, 0]} />
+        <Enemy color="green" position={[-3, 1, 0]} />
       </Physics>
     </Canvas>
   );
