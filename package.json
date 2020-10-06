@@ -10,6 +10,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-three-fiber": "^5.0.3",
+    "three": "^0.121.1",
     "three-font-outliner": "github:ycw/three-font-outliner#v1.0.2"
   },
   "scripts": {
