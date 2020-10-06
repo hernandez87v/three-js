@@ -1,24 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { Canvas, Dom } from 'react-three-fiber';
 import * as serviceWorker from './serviceWorker';
-import Controls from './components/Controls';
-import Scene from './components/Scene';
-import './index.css';
+import App from './App';
 
-function App() {
-  return (
-    <Canvas camera={{ zoom: 40, position: [0, 0, 500] }}>
-      <Suspense
-        fallback={<Dom center className="loading" children="Loading..." />}
-      >
-        {' '}
-        <Controls />
-        <Scene />
-      </Suspense>
-    </Canvas>
-  );
-}
+import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <App />
