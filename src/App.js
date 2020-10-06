@@ -17,7 +17,7 @@ function Paddle({ args = [2, 0.5, 1] }) {
   const [ref, api] = useBox(() => ({ args }))
 
   useFrame((state) => {
-    api.position.set(state.mouse.x, 0, 0)
+    api.position.set(state.mouse.x * state.viewport.width / 2, -state.viewport.height / 2, 0)
   })
   return (
     <mesh ref={ref}>
@@ -33,7 +33,7 @@ export default function App() {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 5]} />
       <pointLight position={[-10, -10, -5]} />
-      <Physics gravity={[0, -30, 0]}>
+      <Physics gravity={[0, -30, 0]} defaultContactMaterial={{ restitution: 1.1 }}>
         <Ball />
         <Paddle />
       </Physics>
