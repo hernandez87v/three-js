@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon';
-import './App.css';
+// import './App.css';
 
 function Ball({ args = [0.5, 32, 32] }) {
   const [ref] = useSphere(() => ({ args: 0.5, mass: 1 }))
@@ -14,9 +14,14 @@ function Ball({ args = [0.5, 32, 32] }) {
 }
 
 function Paddle({ args = [2, 0.5, 1] }) {
+  const [ref, api] = useBox(() => ({ args }))
+
+  useFrame((state) => {
+    api.position.set(state.mouse.x, 0, 0)
+  })
   return (
-    <mesh>
-      <sphereBufferGeometry args={args} />
+    <mesh ref={ref}>
+      <boxBufferGeometry args={args} />
       <meshStandardMaterial color="white" />
     </mesh>
   )
@@ -28,7 +33,7 @@ export default function App() {
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 5]} />
       <pointLight position={[-10, -10, -5]} />
-      <Physics>
+      <Physics gravity={[0, -30, 0]}>
         <Ball />
         <Paddle />
       </Physics>
