@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './Second.css';
 import { Canvas, useFrame } from 'react-three-fiber';
-import { softShadows, MeshWobbleMaterial } from 'drei';
+import { softShadows, MeshWobbleMaterial, OrbitControls } from 'drei';
 
 softShadows();
 
@@ -25,18 +25,18 @@ export default function Second() {
   return (
     <>
       <Canvas
-        shadowMap
         colorManagement
+        shadowMap
         camera={{ position: [-5, 2, 10], fov: 60 }}
       >
         <ambientLight intensity={0.3} />
         <directionalLight
-          castShadow
           position={[0, 10, 0]}
           intensity={1.5}
-          shadow-mapSize-width={1024}
+          castShadow
           shadow-mapSize-height={1024}
-          shadow-camera-far={50}
+          shadow-mapSize-width={1024}
+          shadow-camera-far={500}
           shadow-camera-left={10}
           shadow-camera-right={10}
           shadow-camera-top={10}
@@ -54,11 +54,12 @@ export default function Second() {
             <planeBufferGeometry attach="geometry" args={[100, 100]} />
             <shadowMaterial attach="material" opacity={0.3} />
           </mesh>
+          <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} />
+          <Box position={[-2, 1, -5]} color="red" />
+          <Box position={[5, 1, -2]} color="cyan" />
         </group>
 
-        <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} />
-        <Box position={[-2, 1, -5]} color="red" />
-        <Box position={[5, 1, -2]} color="cyan" />
+        <OrbitControls />
       </Canvas>
     </>
   );
