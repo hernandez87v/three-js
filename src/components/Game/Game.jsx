@@ -23,7 +23,7 @@ function Ball({ args = [0.5, 32, 32] }) {
   );
 }
 
-function Paddle({ args = [2, 0.5, 1] }) {
+function Paddle({ args = [3, 0.5, 1] }) {
   const [ref, api] = useBox(() => ({ args }));
 
   useFrame((state) => {

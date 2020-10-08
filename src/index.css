@@ -1,16 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=News+Cycle&display=swap');
-:root {
-  font-size: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background: #070712;
-  color: #606063;
   overflow: hidden;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #root {
