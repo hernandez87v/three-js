@@ -1,0 +1,28 @@
+a{
+    font-size: smaller;
+}
+header#navbar-header {
+  /* position: relative; */
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+    padding: 10px;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.nav__links li{
+    color: white;
+    display: inline-block;
+    padding: 10px;    
+}
