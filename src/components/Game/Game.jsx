@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon';
-// import './Game.css';
+import './Game.css';
 
 function Ball({ args = [0.5, 32, 32] }) {
     const { viewport } = useThree()
