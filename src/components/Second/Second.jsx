@@ -5,7 +5,7 @@ import { softShadows, MeshWobbleMaterial, OrbitControls } from 'drei';
 
 softShadows();
 
-const Box = ({ position, color, args }) => {
+const Box = ({ position, color, args, speed }) => {
   const mesh = useRef(null);
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
   return (
@@ -14,8 +14,8 @@ const Box = ({ position, color, args }) => {
       <MeshWobbleMaterial
         attach="material"
         color={color}
-        speed={1}
-        factor={0.6}
+        speed={speed}
+        factor={.7}
       />
     </mesh>
   );
@@ -54,9 +54,9 @@ export default function Second() {
             <planeBufferGeometry attach="geometry" args={[100, 100]} />
             <shadowMaterial attach="material" opacity={0.3} />
           </mesh>
-          <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} />
-          <Box position={[-2, 1, -5]} color="red" />
-          <Box position={[5, 1, -2]} color="cyan" />
+          <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} speed={1} />
+          <Box position={[-2, 1, -5]} color="red" speed={2} />
+          <Box position={[5, 1, -2]} color="cyan" speed={2}/>
         </group>
 
         <OrbitControls />
