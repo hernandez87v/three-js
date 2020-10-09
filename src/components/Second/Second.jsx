@@ -27,7 +27,7 @@ export default function Second() {
       <Canvas
         colorManagement
         shadowMap
-        camera={{ position: [-5, 2, 10], fov: 60 }}
+        camera={{ position: [-5, 2, 15], fov: 50 }}
       >
         <ambientLight intensity={0.3} />
         <directionalLight
@@ -60,8 +60,8 @@ export default function Second() {
           <Box position={[0, 5, 0]} color="orange"  speed={4} />
           <Box position={[6, 5, -2]} color="red" args={[3, 2, 1]} speed={.8} />
           <Box position={[-2, 5, -6]} color="cyan" args={[3, 2, 1]} speed={.8} />
-          <Box position={[12, 8, -2]} color="cyan" speed={4} />
-          <Box position={[-5, 7, -6]} color="red" speed={4}/>
+          <Box position={[7, 8, -2]} color="cyan" speed={4} />
+          <Box position={[-5, 8, -6]} color="red" speed={4}/>
         </group>
 
         <OrbitControls />
