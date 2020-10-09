@@ -54,9 +54,14 @@ export default function Second() {
             <planeBufferGeometry attach="geometry" args={[100, 100]} />
             <shadowMaterial attach="material" opacity={0.3} />
           </mesh>
-          <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} speed={1} />
-          <Box position={[-2, 1, -5]} color="red" speed={2} />
-          <Box position={[5, 1, -2]} color="cyan" speed={2}/>
+          <Box position={[0, 1, 0]} color="orange" args={[3, 2, 1]} speed={.8} />
+          <Box position={[-2, 1, -3]} color="red" speed={4} />
+          <Box position={[3, 1, -2]} color="cyan" speed={4} />
+          <Box position={[0, 5, 0]} color="orange"  speed={4} />
+          <Box position={[6, 5, -2]} color="red" args={[3, 2, 1]} speed={.8} />
+          <Box position={[-2, 5, -6]} color="cyan" args={[3, 2, 1]} speed={.8} />
+          <Box position={[12, 8, -2]} color="cyan" speed={4} />
+          <Box position={[-5, 7, -6]} color="red" speed={4}/>
         </group>
 
         <OrbitControls />
