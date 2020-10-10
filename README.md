@@ -1,6 +1,6 @@
 ## React-Three-Fiber Game tutorial
 
-![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-demo.gif?raw=true)
+![](https://github.com/hernandez87v/three-js/blob/main/public/game.webm?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
