@@ -1,6 +1,7 @@
 import React from 'react';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon';
+import { MeshWobbleMaterial } from 'drei';
 import './Game.css';
 
 function Ball({ args = [0.5, 32, 32] }) {
@@ -47,7 +48,12 @@ function Enemy({ args = [2, 0.5, 1], color, ...props }) {
   return (
     <mesh ref={ref}>
       <boxBufferGeometry args={args} />
-      <meshStandardMaterial color={color} />
+      <MeshWobbleMaterial
+        attach="material"
+        color={color}
+        speed={2}
+        factor={0.7}
+      />
     </mesh>
   );
 }
