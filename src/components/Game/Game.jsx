@@ -54,21 +54,24 @@ function Enemy({ args = [2, 0.5, 1], color, ...props }) {
 
 export default function Game() {
   return (
-    <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 5]} />
-      <pointLight position={[-10, -10, -5]} />
-      <Physics
-        gravity={[0, -20, 0]}
-        defaultContactMaterial={{ restitution: 1.1 }}
-      >
-        <Ball />
-        <Paddle />
-        <Enemy color="red" position={[3, 5, 0]} />
-        <Enemy color="cyan" position={[-3, 5, 0]} />
-        <Enemy color="grey" position={[5, 3, 0]} />
-        <Enemy color="green" position={[-3, 1, 0]} />
-      </Physics>
-    </Canvas>
+    <>
+      <h1 className="page-title">G A M E</h1>
+      <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
+        <ambientLight intensity={0.3} />
+        <pointLight position={[10, 10, 5]} />
+        <pointLight position={[-10, -10, -5]} />
+        <Physics
+          gravity={[0, -20, 0]}
+          defaultContactMaterial={{ restitution: 1.1 }}
+        >
+          <Ball />
+          <Paddle />
+          <Enemy color="red" position={[3, 5, 0]} />
+          <Enemy color="cyan" position={[-3, 5, 0]} />
+          <Enemy color="grey" position={[5, 3, 0]} />
+          <Enemy color="green" position={[-3, 1, 0]} />
+        </Physics>
+      </Canvas>
+    </>
   );
 }
