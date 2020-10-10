@@ -19,6 +19,10 @@ body {
   position: fixed;
   background: ivory;
 }
+/* 3D Canvas for each page */
+canvas {
+  min-height: -webkit-fill-available;
+}
 /* Title background on each page  */
 .page-title {
   font-weight: 400;
