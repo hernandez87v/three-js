@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './Second.css';
+import './FloatingBoxes.css';
 import { Canvas, useFrame } from 'react-three-fiber';
 import { softShadows, MeshWobbleMaterial, OrbitControls } from 'drei';
 
@@ -21,7 +21,7 @@ const Box = ({ position, color, args, speed }) => {
   );
 };
 
-export default function Second() {
+export default function FloatingBoxes() {
   return (
     <>
       <h1 className="page-title">F L O A T I N G - B O X E S</h1>

@@ -14,7 +14,7 @@ export default function Navigation() {
             <Link to="/game">GAME</Link>
           </li>
           <li>
-            <Link to="/second">SECOND</Link>
+            <Link to="/floating-boxes">FLOATING-BOXES</Link>
           </li>
           <li>
             <Link to="/third">THIRD</Link>
