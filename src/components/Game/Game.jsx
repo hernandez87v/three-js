@@ -38,7 +38,7 @@ function Paddle({ args = [3, 0.5, 1] }) {
   return (
     <mesh ref={ref}>
       <boxBufferGeometry args={args} />
-      <meshStandardMaterial color="#3a3335" />
+      <meshStandardMaterial color="#dce0cd" />
     </mesh>
   );
 }
@@ -72,10 +72,10 @@ export default function Game() {
         >
           <Ball />
           <Paddle />
-          <Enemy color="#d81e5b" position={[2, 4.3, 0]} />
-          <Enemy color="#fdf0d5" position={[-3, 4.5, 0]} />
-          <Enemy color="#c6d8d3" position={[4, 2, 0]} />
-          <Enemy color="#f7a292" position={[-2, 1, 0]} />
+          <Enemy color="#7de8ea" position={[2, 4.3, 0]} />
+          <Enemy color="#ccdb86" position={[-3, 4.5, 0]} />
+          <Enemy color="#67a030" position={[4, 2, 0]} />
+          <Enemy color="#003700" position={[-2, 1, 0]} />
         </Physics>
       </Canvas>
     </>
