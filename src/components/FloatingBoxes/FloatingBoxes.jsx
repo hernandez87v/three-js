@@ -61,9 +61,9 @@ export default function FloatingBoxes() {
             args={[3, 2, 1]}
             speed={0.8}
           />
-          <Box position={[-2, 1, -3]} color="#d3022c" speed={4} />
-          <Box position={[3, 1, -2]} color="#FF5733" speed={4} />
-          <Box position={[0, 5, 0]} color="#FFC300" speed={4} />
+          <Box position={[-2, 1, -3]} color="#d3022c" speed={-4} />
+          <Box position={[3, 1, -2]} color="#FF5733" speed={-4} />
+          <Box position={[0, 5, 0]} color="#FFC300" speed={-4} />
           <Box
             position={[6, 5, -2]}
             color="#d3022c"
