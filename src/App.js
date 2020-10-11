@@ -1,7 +1,8 @@
 import React from 'react';
+import Navigation from './components/Navigation/Navigation';
 import Game from './components/Game/Game';
 import FloatingBoxes from './components/FloatingBoxes/FloatingBoxes';
-import Navigation from './components/Navigation/Navigation';
+import Mirrors from './components/Mirrors/Mirrors';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -13,6 +14,7 @@ export default function App() {
         <Switch>
           <Route path="/game" exact component={Game} />
           <Route path="/floating-boxes" exact component={FloatingBoxes} />
+          <Route path="/mirrors" exact component={Mirrors} />
         </Switch>
       </div>
     </Router>

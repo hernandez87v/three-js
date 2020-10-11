@@ -17,7 +17,7 @@ export default function Navigation() {
             <Link to="/floating-boxes">FLOATING-BOXES</Link>
           </li>
           <li>
-            <Link to="/third">THIRD</Link>
+            <Link to="/mirrors">MIRRORS</Link>
           </li>
         </ul>
       </nav>
