@@ -61,7 +61,9 @@ function Enemy({ args = [2, 0.5, 1], color, ...props }) {
 export default function Game() {
   return (
     <>
-      <h1 className="page-title">G A M E</h1>
+      <div className="page-title">
+        <h1 className="neumorph">G A M E</h1>
+      </div>
       <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
         <ambientLight intensity={0.3} />
         <pointLight position={[10, 10, 5]} />
