@@ -82,6 +82,11 @@ export default function FloatingBoxes() {
 
         <OrbitControls />
       </Canvas>
+      <div className="dep-description">
+      <h3>Dependancies</h3>
+      <h4>react-three-fiber</h4>
+        <h4>drei</h4>
+        </div>
     </>
   );
 }
