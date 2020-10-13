@@ -12,12 +12,12 @@
   justify-content: flex-end;
 }
 
-.dep-description h3 {
+li {
   font-size: x-small;
   margin: 1px 5px;
 }
 
-.dep-description h4 {
+p {
   font-size: x-small;
   margin: 1px 5px;
 }
