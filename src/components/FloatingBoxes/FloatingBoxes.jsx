@@ -82,11 +82,11 @@ export default function FloatingBoxes() {
 
         <OrbitControls />
       </Canvas>
-      <ul className="dep-description">
-      <p>Dependancies</p>
-      <li>react-three-fiber</li>
-        <li>drei</li>
-        </ul>
+      <div className="tut-link">
+        <h5 type="button" id="tutorial" value="Tutorial">
+          <a href="https://youtu.be/fdtqqyeKRJk">Tutorial</a>
+        </h5>
+      </div>
     </>
   );
 }
