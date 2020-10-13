@@ -1,11 +1,23 @@
 .dep-description {
-  bottom: 0px;
+  margin: 0;
+  bottom: 0;
   z-index: -1;
   font-weight: 400;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   position: fixed;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.dep-description h3 {
+  font-size: x-small;
+  margin: 1px 5px;
+}
+
+.dep-description h4 {
+  font-size: x-small;
+  margin: 1px 5px;
 }
