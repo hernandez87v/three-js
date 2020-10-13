@@ -24,7 +24,9 @@ const Box = ({ position, color, args, speed }) => {
 export default function FloatingBoxes() {
   return (
     <>
-      <h1 className="page-title">F L O A T I N G - B O X E S</h1>
+      <div className="page-title">
+        <h1 className="neumorph">F L O A T I N G - B O X E S</h1>
+      </div>
       <Canvas
         colorManagement
         shadowMap
@@ -84,7 +86,9 @@ export default function FloatingBoxes() {
       </Canvas>
       <div className="tut-link">
         <h5 type="button" id="tutorial" value="Tutorial">
-          <a href="https://youtu.be/fdtqqyeKRJk">Tutorial</a>
+          <a href="https://youtu.be/fdtqqyeKRJk" rel="_blank">
+            Tutorial
+          </a>
         </h5>
       </div>
     </>
