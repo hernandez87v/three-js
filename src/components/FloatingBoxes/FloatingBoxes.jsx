@@ -85,11 +85,13 @@ export default function FloatingBoxes() {
         <OrbitControls />
       </Canvas>
       <div className="tut-link">
-        <h5 type="button" id="tutorial" value="Tutorial">
-          <a href="https://youtu.be/fdtqqyeKRJk" rel="_blank">
-            Tutorial
-          </a>
-        </h5>
+        <a
+          href="https://youtu.be/fdtqqyeKRJk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          tutorial
+        </a>
       </div>
     </>
   );

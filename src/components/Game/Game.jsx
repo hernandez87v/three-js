@@ -80,6 +80,15 @@ export default function Game() {
           <Enemy color="#003700" position={[-2, 1, 0]} />
         </Physics>
       </Canvas>
+      <div className="tut-link">
+        <a
+          href="https://youtu.be/Go3QxQG6RK8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          tutorial
+        </a>
+      </div>
     </>
   );
 }
