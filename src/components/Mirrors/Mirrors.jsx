@@ -1,9 +1,4 @@
 import React from 'react';
-// import { Text } from 'drei';
-
-// function Title() {
-//   return <Text material-toneMapped={false}>My Title</Text>;
-// }
 
 export default function Mirrors() {
   return (
