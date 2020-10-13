@@ -42,8 +42,8 @@ canvas {
   font-size: x-large;
   height: 80px;
   width: 320px;
-  border-radius: 20px;
+  border-radius: 1rem;
   background: #fffff0;
   box-shadow: inset 15px 15px 30px 0 rgba(0, 0, 0, 0.2),
-    inset -15px -15px 30px 0 rgba(255, 255, 255, 0.4);
+    inset -15px -15px 30px 0 rgba(255, 255, 240, 0.4);
 }
