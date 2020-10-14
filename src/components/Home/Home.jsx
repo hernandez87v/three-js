@@ -10,31 +10,46 @@ export default function Home() {
         <Canvas
           //   colorManagement
           shadowMap
+          camera={{ position: [0, 5, 1] }}
+          //   camera={{ position: [45, 2, 0.1, 100] }}
         >
           <perspectiveCamera
-            position={(45, 2, 0.1, 100)}
-            camera={(0, 5, 1)}
+            // fov={45}
+            // aspect={2}
+            // near={0.1}
+            // far={100}
+            // position={[45, 2, 0.1, 100]}
+            aspect
+            // camera={(0, 5, 1)}
+            // camera={{
+            //   fov: [45],
+            //   aspect: [2],
+            //   near: [0.1],
+            //   far: [100],
+            // }}
             updateProjectionMatrix
-          />
-          <ambientLight intensity={0.3} />
-          <directionalLight
-            castShadow
-            shadow-mapSize-width={1024}
-            shadow-mapSize-height={1024}
-          />
-          <OrbitControls autoRotate />
+          >
+            <ambientLight intensity={0.3} />
+            <directionalLight
+              castShadow={true}
+              shadow-mapSize-width={1024}
+              shadow-mapSize-height={1024}
+            />
+            <OrbitControls autoRotate />
 
-          <group>
-            <mesh receiveShadow position={[0, -5, 0]}>
-              <planeBufferGeometry
-                rotateX={[-0.5 * Math.PI]}
-                attach="geometry"
-                args={[10, 10]}
-              />
-              <shadowMaterial receiveShadow transparent opacity={0.5} />
-              <Box attach="material" color="blue" />
-            </mesh>
-          </group>
+            <group>
+              <mesh receiveShadow>
+                <planeBufferGeometry
+                  receiveShadw
+                  rotateX={[-0.5 * Math.PI]}
+                  attach="geometry"
+                  args={[10, 10]}
+                  //   shadowMaterial={{ transparent: true, opacity: [0.5] }}
+                />
+                <Box attach="material" color="blue" />
+              </mesh>
+            </group>
+          </perspectiveCamera>
         </Canvas>
       </div>
     </>
