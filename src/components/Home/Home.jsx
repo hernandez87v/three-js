@@ -8,34 +8,33 @@ export default function Home() {
     <>
       <div>
         <Canvas
-          colorManagement
+          //   colorManagement
           shadowMap
-          camera={{ position: [45, 2, 50], fov: 10 }}
         >
+          <perspectiveCamera
+            position={(45, 2, 0.1, 100)}
+            camera={(0, 5, 1)}
+            updateProjectionMatrix
+          />
           <ambientLight intensity={0.3} />
           <directionalLight
-            // position={[0, 10, 0]}
-            // intensity={1.5}
             castShadow
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
           />
+          <OrbitControls autoRotate />
+
           <group>
-            <mesh
-              receiveShadow
-              //   rotation={[-Math.PI / 2, 0, 0]}
-              position={[0, -5, 0]}
-            >
-              <shadowMaterial transparent opacity={0.5} />
+            <mesh receiveShadow position={[0, -5, 0]}>
               <planeBufferGeometry
-                rotation={[-0.5 * Math.PI]}
+                rotateX={[-0.5 * Math.PI]}
                 attach="geometry"
                 args={[10, 10]}
               />
-              <Box attach="geometry" color="blue" />
+              <shadowMaterial receiveShadow transparent opacity={0.5} />
+              <Box attach="material" color="blue" />
             </mesh>
           </group>
-          <OrbitControls />
         </Canvas>
       </div>
     </>
