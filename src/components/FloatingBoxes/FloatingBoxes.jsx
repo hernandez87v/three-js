@@ -32,6 +32,7 @@ export default function FloatingBoxes() {
         shadowMap
         camera={{ position: [-5, 2, 15], fov: 50 }}
       >
+        <color attach="background" args={['papayawhip']} />
         <ambientLight intensity={0.3} />
         <directionalLight
           position={[0, 10, 0]}
