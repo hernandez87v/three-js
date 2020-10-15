@@ -70,12 +70,12 @@ export default function Home() {
         shadowMap
         colorManagement
         gl={{ alpha: false }}
-        camera={{ position: [-1, 2, 2.5], fov: 50 }}
+        camera={{ position: [0, 10, 0], fov: 14 }}
       >
         <color attach="background" args={['lightgreen']} />
         <hemisphereLight intensity={0.35} />
         <spotLight
-          position={[5, 5, 5]}
+          position={[10, 10, 10]}
           angle={0.3}
           penumbra={1}
           intensity={2}
@@ -85,9 +85,9 @@ export default function Home() {
         />
         <Physics>
           <Plane rotation={[-Math.PI / 2, 0, 0]} />
-          <Cubes number={500} />
+          <Cubes number={250} />
         </Physics>
-        <OrbitControls />
+        <OrbitControls autoRotate />
       </Canvas>
     </>
   );
