@@ -3,6 +3,7 @@ import React, { useMemo } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import { Physics, usePlane, useBox } from 'use-cannon';
 import niceColors from 'nice-color-palettes';
+import { OrbitControls } from 'drei';
 // import './Home.css';
 
 export default function Home() {
@@ -69,7 +70,7 @@ export default function Home() {
         shadowMap
         colorManagement
         gl={{ alpha: false }}
-        camera={{ position: [-1, 1, 2.5], fov: 50 }}
+        camera={{ position: [-1, 2, 2.5], fov: 50 }}
       >
         <color attach="background" args={['lightgreen']} />
         <hemisphereLight intensity={0.35} />
@@ -86,6 +87,7 @@ export default function Home() {
           <Plane rotation={[-Math.PI / 2, 0, 0]} />
           <Cubes number={500} />
         </Physics>
+        <OrbitControls />
       </Canvas>
     </>
   );
