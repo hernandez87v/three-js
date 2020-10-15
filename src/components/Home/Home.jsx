@@ -1,61 +1,92 @@
-import React from 'react';
-import { Box, OrbitControls } from 'drei';
-import { Canvas } from 'react-three-fiber';
-// import * as THREE from 'three';
+import * as THREE from 'three';
+import React, { useMemo } from 'react';
+import { Canvas, useFrame } from 'react-three-fiber';
+import { Physics, usePlane, useBox } from 'use-cannon';
+import niceColors from 'nice-color-palettes';
 // import './Home.css';
-import { BackSide } from 'three';
 
 export default function Home() {
-  const BoxGlow = () => {
+  function Plane(props) {
+    const [ref] = usePlane(() => ({ mass: 0, ...props }));
     return (
-      <mesh>
-        <boxBufferGeometry attach="geometry" />
-        <meshBasicMaterial color={0xfff1ef} attach="material" />
+      <mesh ref={ref} receiveShadow>
+        <planeBufferGeometry attach="geometry" args={[20, 20]} />
+        <shadowMaterial attach="material" color="#171717" opacity={0.3} />
       </mesh>
     );
-  };
+  }
+
+  function Cubes({ number }) {
+    const [ref, api] = useBox(() => ({
+      mass: 1,
+      args: [0.1, 0.1, 0.1],
+      position: [Math.random() - 0.5, Math.random() * 2, Math.random() - 0.5],
+    }));
+
+    const colors = useMemo(() => {
+      const array = new Float32Array(number * 3);
+      const color = new THREE.Color();
+      for (let i = 0; i < number; i++)
+        color
+          .set(niceColors[39][Math.floor(Math.random() * 5)])
+          .convertSRGBToLinear()
+          .toArray(array, i * 3);
+      return array;
+    }, [number]);
+
+    useFrame(() =>
+      api
+        .at(Math.floor(Math.random() * number))
+        .position.set(0, Math.random() * 2, 0)
+    );
+    return (
+      <instancedMesh
+        receiveShadow
+        castShadow
+        ref={ref}
+        args={[null, null, number]}
+      >
+        <boxBufferGeometry attach="geometry" args={[0.1, 0.1, 0.1]}>
+          <instancedBufferAttribute
+            attachObject={['attributes', 'color']}
+            args={[colors, 3]}
+          />
+        </boxBufferGeometry>
+        <meshLambertMaterial
+          attach="material"
+          vertexColors={THREE.VertexColors}
+        />
+      </instancedMesh>
+    );
+  }
 
   return (
     <>
-      <div className="home-grid">
-        <Canvas
-          // camera={{
-          //   position: [0, 5, 1],
-          // }}
-          colorManagement
-          shadowMap
-        >
-          <ambientLight intensity={0.3} />
-          <directionalLight
-            castShadow
-            shadow-mapSize-width={1024}
-            shadow-mapSize-height={1024}
-          />
-          <OrbitControls autoRotate />
-          <group>
-            <mesh receiveShadow position={[0, -5, 1]}>
-              <perspectiveCamera fov={45} aspect={2} near={0.1} far={100}>
-                <planeBufferGeometry
-                  receiveShadw
-                  attach="geometry"
-                  args={[10, 10]}
-
-                  // rotateX={-0.5 * Math.PI}
-                  //   shadowMaterial={{ transparent: true, opacity: [0.5] }}
-                />
-                <meshStandardMaterial
-                  color={0xd2452b}
-                  attach="material"
-                  side={BackSide}
-                  metalness={0.4}
-                />
-                <BoxGlow />
-                <gridHelper />
-              </perspectiveCamera>
-            </mesh>
-          </group>
-        </Canvas>
+      <div className="page-title">
+        <h1 className="neumorph">H O M E</h1>
       </div>
+      <Canvas
+        shadowMap
+        colorManagement
+        gl={{ alpha: false }}
+        camera={{ position: [-1, 1, 2.5], fov: 50 }}
+      >
+        <color attach="background" args={['lightgreen']} />
+        <hemisphereLight intensity={0.35} />
+        <spotLight
+          position={[5, 5, 5]}
+          angle={0.3}
+          penumbra={1}
+          intensity={2}
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+        />
+        <Physics>
+          <Plane rotation={[-Math.PI / 2, 0, 0]} />
+          <Cubes number={500} />
+        </Physics>
+      </Canvas>
     </>
   );
 }
