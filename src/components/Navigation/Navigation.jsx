@@ -13,11 +13,13 @@ export default function Navigation() {
           <li>
             <Link to="/game">GAME</Link>
           </li>
+          <span>|</span>
           <li>
-            <Link to="/floating-boxes">FLOATING-BOXES</Link>
+            <Link to="/floating-boxes">FLOATING - BOXES</Link>
           </li>
+          <span>|</span>
           <li>
-            <Link to="/cube-heap">CUBE-HEAP</Link>
+            <Link to="/bunch-o-cubes">BUNCH - O - CUBES</Link>
           </li>
         </ul>
       </nav>

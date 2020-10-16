@@ -4,9 +4,9 @@ import { Canvas, useFrame } from 'react-three-fiber';
 import { Physics, usePlane, useBox } from 'use-cannon';
 import niceColors from 'nice-color-palettes';
 import { OrbitControls } from 'drei';
-import './CubeHeap.css';
+import './BunchOCubes.css';
 
-export default function CubeHeap() {
+export default function BunchOCubes() {
   function Plane(props) {
     const [ref] = usePlane(() => ({ mass: 0, ...props }));
     return (
@@ -89,6 +89,15 @@ export default function CubeHeap() {
           </Physics>
           <OrbitControls autoRotate />
         </Canvas>
+        <div className="tut-link">
+          <a
+            href="https://github.com/pmndrs/use-cannon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            tutorial
+          </a>
+        </div>
       </div>
     </>
   );
