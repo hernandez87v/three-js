@@ -15,9 +15,14 @@ body {
   padding: 0;
 }
 
+#navbar-header a {
+  color: black;
+}
+
 body {
   position: fixed;
-  /* background: ivory; */
+  background: ivory;
+  color: black;
 }
 /* 3D Canvas for each page */
 canvas {
