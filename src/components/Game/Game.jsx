@@ -29,7 +29,7 @@ function Paddle({ args = [3, 0.5, 1] }) {
 
   useFrame((state) => {
     api.position.set(
-      (state.mouse.x * state.viewport.width) / 2,
+      (state.touch.x * state.viewport.width) / 2,
       -state.viewport.height / 2,
       0
     );
