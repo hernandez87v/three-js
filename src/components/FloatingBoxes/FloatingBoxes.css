@@ -1,15 +1,3 @@
 .floating-boxes {
   background-color: papayawhip;
 }
-
-.tut-link {
-  right: 0.5rem;
-  bottom: 5px;
-  display: flex;
-  position: fixed;
-}
-
-.tut-link a {
-  color: rgb(197, 197, 197);
-  font-weight: lighter;
-}
