@@ -61,33 +61,35 @@ function Enemy({ args = [2, 0.5, 1], color, ...props }) {
 export default function Game() {
   return (
     <>
-      <div className="page-title">
-        <h1 className="neumorph">G A M E</h1>
-      </div>
-      <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
-        <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 5]} />
-        <pointLight position={[-10, -10, -5]} />
-        <Physics
-          gravity={[0, -20, 0]}
-          defaultContactMaterial={{ restitution: 1.1 }}
-        >
-          <Ball />
-          <Paddle />
-          <Enemy color="#7de8ea" position={[2, 4.3, 0]} />
-          <Enemy color="#ccdb86" position={[-3, 4.5, 0]} />
-          <Enemy color="#67a030" position={[4, 2, 0]} />
-          <Enemy color="#003700" position={[-2, 1, 0]} />
-        </Physics>
-      </Canvas>
-      <div className="tut-link">
-        <a
-          href="https://youtu.be/Go3QxQG6RK8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          tutorial
-        </a>
+      <div className="game-bg">
+        <div className="page-title">
+          <h1 className="neumorph">G A M E</h1>
+        </div>
+        <Canvas camera={{ position: [0, 5, 12], fov: 50 }}>
+          <ambientLight intensity={0.3} />
+          <pointLight position={[10, 10, 5]} />
+          <pointLight position={[-10, -10, -5]} />
+          <Physics
+            gravity={[0, -20, 0]}
+            defaultContactMaterial={{ restitution: 1.1 }}
+          >
+            <Ball />
+            <Paddle />
+            <Enemy color="#7de8ea" position={[2, 4.3, 0]} />
+            <Enemy color="#ccdb86" position={[-3, 4.5, 0]} />
+            <Enemy color="#67a030" position={[4, 2, 0]} />
+            <Enemy color="#003700" position={[-2, 1, 0]} />
+          </Physics>
+        </Canvas>
+        <div className="tut-link">
+          <a
+            href="https://youtu.be/Go3QxQG6RK8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            tutorial
+          </a>
+        </div>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import { Canvas, useFrame } from 'react-three-fiber';
 import { Physics, usePlane, useBox } from 'use-cannon';
 import niceColors from 'nice-color-palettes';
 import { OrbitControls } from 'drei';
+import './CubeHeap.css';
 
 export default function CubeHeap() {
   function Plane(props) {
@@ -61,32 +62,34 @@ export default function CubeHeap() {
   }
   return (
     <>
-      <div className="page-title">
-        <h1 className="neumorph">H E A P-O F-C U B E S</h1>
+      <div className="cube-heap">
+        <div className="page-title">
+          <h1 className="neumorph">H E A P-O F-C U B E S</h1>
+        </div>
+        <Canvas
+          shadowMap
+          colorManagement
+          gl={{ alpha: false }}
+          camera={{ position: [0, 10, 0], fov: 16 }}
+        >
+          <color attach="background" args={['palegreen']} />
+          <hemisphereLight intensity={0.35} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.3}
+            penumbra={1}
+            intensity={2}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+          <Physics>
+            <Plane rotation={[-Math.PI / 2, 0, 0]} />
+            <Cubes number={250} />
+          </Physics>
+          <OrbitControls autoRotate />
+        </Canvas>
       </div>
-      <Canvas
-        shadowMap
-        colorManagement
-        gl={{ alpha: false }}
-        camera={{ position: [0, 10, 0], fov: 16 }}
-      >
-        <color attach="background" args={['palegreen']} />
-        <hemisphereLight intensity={0.35} />
-        <spotLight
-          position={[10, 10, 10]}
-          angle={0.3}
-          penumbra={1}
-          intensity={2}
-          castShadow
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-        />
-        <Physics>
-          <Plane rotation={[-Math.PI / 2, 0, 0]} />
-          <Cubes number={250} />
-        </Physics>
-        <OrbitControls autoRotate />
-      </Canvas>
     </>
   );
 }

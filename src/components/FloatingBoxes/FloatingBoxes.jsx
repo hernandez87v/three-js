@@ -24,75 +24,77 @@ const Box = ({ position, color, args, speed }) => {
 export default function FloatingBoxes() {
   return (
     <>
-      <div className="page-title">
-        <h1 className="neumorph">F L O A T I N G - B O X E S</h1>
-      </div>
-      <Canvas
-        colorManagement
-        shadowMap
-        camera={{ position: [-5, 2, 15], fov: 50 }}
-      >
-        <color attach="background" args={['papayawhip']} />
-        <ambientLight intensity={0.3} />
-        <directionalLight
-          position={[0, 10, 0]}
-          intensity={1.5}
-          castShadow
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-          shadow-camera-far={50}
-          shadow-camera-left={-10}
-          shadow-camera-right={10}
-          shadow-camera-top={10}
-          shadow-camera-bottom={-10}
-        />
-        <pointLight position={[-10, 0, -20]} intensity={0.5} />
-        <pointLight position={[0, -10, 0]} intensity={1.5} />
-
-        <group>
-          <mesh
-            receiveShadow
-            rotation={[-Math.PI / 2, 0, 0]}
-            position={[0, -5, 0]}
-          >
-            <planeBufferGeometry attach="geometry" args={[100, 100]} />
-            <shadowMaterial attach="material" opacity={0.3} />
-          </mesh>
-          <Box
-            position={[0, 1, 0]}
-            color="#FFC300"
-            args={[3, 2, 1]}
-            speed={0.8}
-          />
-          <Box position={[-2, 1, -3]} color="#d3022c" speed={-4} />
-          <Box position={[3, 1, -2]} color="#FF5733" speed={-4} />
-          <Box position={[0, 5, 0]} color="#FFC300" speed={-4} />
-          <Box
-            position={[6, 5, -2]}
-            color="#d3022c"
-            args={[3, 2, 1]}
-            speed={0.8}
-          />
-          <Box
-            position={[-2, 5, -6]}
-            color="#FF5733"
-            args={[3, 2, 1]}
-            speed={0.8}
-          />
-          <Box position={[7, 8, -2]} color="#FF5733" speed={4} />
-          <Box position={[-5, 8, -6]} color="#d3022c" speed={4} />
-        </group>
-
-        <OrbitControls />
-      </Canvas>
-      <div className="tut-link">
-        <a
-          href="https://youtu.be/fdtqqyeKRJk"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="floating-boxes">
+        <div className="page-title">
+          <h1 className="neumorph">F L O A T I N G - B O X E S</h1>
+        </div>
+        <Canvas
+          colorManagement
+          shadowMap
+          camera={{ position: [-5, 2, 15], fov: 50 }}
         >
-          tutorial
-        </a>
+          {/* <color attach="background" args={['papayawhip']} /> */}
+          <ambientLight intensity={0.3} />
+          <directionalLight
+            position={[0, 10, 0]}
+            intensity={1.5}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+            shadow-camera-far={50}
+            shadow-camera-left={-10}
+            shadow-camera-right={10}
+            shadow-camera-top={10}
+            shadow-camera-bottom={-10}
+          />
+          <pointLight position={[-10, 0, -20]} intensity={0.5} />
+          <pointLight position={[0, -10, 0]} intensity={1.5} />
+
+          <group>
+            <mesh
+              receiveShadow
+              rotation={[-Math.PI / 2, 0, 0]}
+              position={[0, -5, 0]}
+            >
+              <planeBufferGeometry attach="geometry" args={[100, 100]} />
+              <shadowMaterial attach="material" opacity={0.3} />
+            </mesh>
+            <Box
+              position={[0, 1, 0]}
+              color="#FFC300"
+              args={[3, 2, 1]}
+              speed={0.8}
+            />
+            <Box position={[-2, 1, -3]} color="#d3022c" speed={-4} />
+            <Box position={[3, 1, -2]} color="#FF5733" speed={-4} />
+            <Box position={[0, 5, 0]} color="#FFC300" speed={-4} />
+            <Box
+              position={[6, 5, -2]}
+              color="#d3022c"
+              args={[3, 2, 1]}
+              speed={0.8}
+            />
+            <Box
+              position={[-2, 5, -6]}
+              color="#FF5733"
+              args={[3, 2, 1]}
+              speed={0.8}
+            />
+            <Box position={[7, 8, -2]} color="#FF5733" speed={4} />
+            <Box position={[-5, 8, -6]} color="#d3022c" speed={4} />
+          </group>
+
+          <OrbitControls />
+        </Canvas>
+        <div className="tut-link">
+          <a
+            href="https://youtu.be/fdtqqyeKRJk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            tutorial
+          </a>
+        </div>
       </div>
     </>
   );
