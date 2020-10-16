@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home-bg">
       <div className="page-title">
-        <h1 className="neumorph">H O M E</h1>
+        <h1 className="neumorph">🖱 ☝</h1>
       </div>
     </div>
   );

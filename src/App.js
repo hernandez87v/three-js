@@ -6,6 +6,7 @@ import FloatingBoxes from './components/FloatingBoxes/FloatingBoxes';
 import BunchOCubes from './components/BunchOCubes/BunchOCubes';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Bubbles from './components/Bubbles/Bubbles';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/game" exact component={Game} />
           <Route path="/floating-boxes" exact component={FloatingBoxes} />
           <Route path="/bunch-o-cubes" exact component={BunchOCubes} />
+          <Route path="/bubbles" exact component={Bubbles} />
         </Switch>
       </div>
     </Router>
