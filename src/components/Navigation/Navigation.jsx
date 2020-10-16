@@ -21,6 +21,10 @@ export default function Navigation() {
           <li>
             <Link to="/bunch-o-cubes">BUNCH - O - CUBES</Link>
           </li>
+          <span>|</span>
+          <li>
+            <Link to="/bubbles">BUBBLES</Link>
+          </li>
         </ul>
       </nav>
     </header>

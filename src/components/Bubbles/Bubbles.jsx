@@ -111,7 +111,7 @@ function Scene() {
   );
 }
 
-export default function Home() {
+export default function Bubbles() {
   return (
     <>
       <div className="bubble-bg">
