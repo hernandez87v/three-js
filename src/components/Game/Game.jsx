@@ -2,6 +2,7 @@ import React from 'react';
 import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { Physics, useSphere, useBox, usePlane } from 'use-cannon';
 import { MeshWobbleMaterial } from 'drei';
+// import { useDrag } from 'react-use-gesture';
 import './Game.css';
 
 function Ball({ args = [0.5, 32, 32] }) {
@@ -29,12 +30,20 @@ function Paddle({ args = [3, 0.5, 1] }) {
 
   useFrame((state) => {
     api.position.set(
-      (state.touch.x * state.viewport.width) / 2,
+      (state.mouse.x * state.viewport.width) / 2,
       -state.viewport.height / 2,
       0
     );
     api.rotation.set(0, 0, 0);
   });
+
+  // reference for USEDRAG https://use-gesture.netlify.app/docs/options/
+  //   const [{ x }, set, ref] = useBox(() => ({ x: 0, args }));
+  //   const bind = useDrag(
+  //     ({ down, movement: [mx] }) =>
+  //       set({ x: down ? mx : 0, immediate: down, config: { duration: 3000 } }),
+  //     { initial: () => [x.get(), 0] }
+  //   );
   return (
     <mesh ref={ref}>
       <boxBufferGeometry args={args} />
