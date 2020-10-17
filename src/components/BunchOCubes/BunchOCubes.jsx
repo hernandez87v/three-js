@@ -4,7 +4,6 @@ import { Canvas, useFrame } from 'react-three-fiber';
 import { Physics, usePlane, useBox } from 'use-cannon';
 import niceColors from 'nice-color-palettes';
 import { OrbitControls } from 'drei';
-import './BunchOCubes.css';
 
 export default function BunchOCubes() {
   function Plane(props) {
@@ -64,9 +63,6 @@ export default function BunchOCubes() {
   return (
     <>
       <div className="cube-heap">
-        <div className="page-title">
-          <h1 className="neumorph">H E A P-O F-C U B E S</h1>
-        </div>
         <Canvas
           shadowMap
           colorManagement
