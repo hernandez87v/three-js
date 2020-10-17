@@ -9,6 +9,7 @@ import './BunchOCubes.css';
 export default function BunchOCubes() {
   function Plane(props) {
     const [ref] = usePlane(() => ({ mass: 0, ...props }));
+
     return (
       <mesh ref={ref} receiveShadow>
         <planeBufferGeometry attach="geometry" args={[20, 20]} />
@@ -75,11 +76,11 @@ export default function BunchOCubes() {
           <color attach="background" args={['palegreen']} />
           <hemisphereLight intensity={0.35} />
           <spotLight
-            position={[10, 10, 10]}
+            castShadow
+            position={[5, 5, 5]}
             angle={0.3}
             penumbra={1}
             intensity={2}
-            castShadow
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
           />
