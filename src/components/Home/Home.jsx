@@ -13,11 +13,11 @@ function Jumbo() {
   );
   return (
     <group ref={ref}>
-      <Text hAlign="left" position={[0, 5, 0]} children="ORBIT" />
-      <Text hAlign="left" position={[15, 5, 0]} children="WITH" />
-      <Text hAlign="left" position={[0, -5, 0]} children="MOUSE" />
-      <Text hAlign="left" position={[0, 0, 0]} children="OR" />
-      <Text hAlign="left" position={[16.5, -4.2, 0]} children="TOUCH" />
+      <Text hAlign="center" position={[0, 10, 0]} children="ORBIT" />
+      <Text hAlign="center" position={[0, 5, 0]} children="WITH" />
+      <Text hAlign="center" position={[0, -1, 0]} children="MOUSE" />
+      <Text hAlign="center" position={[0, -7.5, 0]} children="OR" size={1.5} />
+      <Text hAlign="center" position={[0, -14, 0]} children="TOUCH" />
     </group>
   );
 }
