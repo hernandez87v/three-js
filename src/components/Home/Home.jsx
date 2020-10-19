@@ -1,7 +1,7 @@
 // import * as THREE from 'three';
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
-import { OrbitControls } from 'drei';
+import { Html, OrbitControls } from 'drei';
 import Text from './Text';
 import './Home.css';
 
@@ -35,7 +35,7 @@ export default function Home() {
       <Canvas camera={{ position: [0, 0, 35] }}>
         <ambientLight intensity={2} />
         <pointLight position={[40, 40, 40]} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<Html>loading..</Html>}>
           <Jumbo />
           <OrbitControls />
         </Suspense>
