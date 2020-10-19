@@ -1,7 +1,7 @@
 // import * as THREE from 'three';
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'drei';
 import Text from './Text';
 
 function Jumbo() {
@@ -33,6 +33,7 @@ export default function Home() {
       <pointLight position={[40, 40, 40]} />
       <Suspense fallback={null}>
         <Jumbo />
+        <OrbitControls />
       </Suspense>
     </Canvas>
   );
