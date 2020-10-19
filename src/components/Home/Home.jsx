@@ -22,9 +22,6 @@ function Jumbo() {
     </group>
   );
 }
-
-// let i = 0;
-
 // This component was auto-generated from GLTF by: https://github.com/react-spring/gltfjsx
 
 export default function Home() {

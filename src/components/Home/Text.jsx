@@ -10,18 +10,18 @@ export default function ({
   color = '#000000',
   ...props
 }) {
-  const font = useLoader(THREE.FontLoader, '/typeface.json');
+  const font = useLoader(THREE.FontLoader, '/Modak_Regular.json');
   const config = useMemo(
     () => ({
       font,
       size: 40,
-      height: 30,
+      height: 20,
       curveSegments: 32,
       bevelEnabled: true,
-      bevelThickness: 6,
-      bevelSize: 2.5,
+      bevelThickness: 10,
+      bevelSize: 3,
       bevelOffset: 0,
-      bevelSegments: 8,
+      bevelSegments: 5,
     }),
     [font]
   );
