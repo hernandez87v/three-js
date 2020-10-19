@@ -3,6 +3,7 @@ import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import { OrbitControls } from 'drei';
 import Text from './Text';
+import './Home.css';
 
 function Jumbo() {
   const ref = useRef();
@@ -28,14 +29,16 @@ function Jumbo() {
 
 export default function Home() {
   return (
-    <Canvas camera={{ position: [0, 0, 35] }}>
-      <ambientLight intensity={2} />
-      <pointLight position={[40, 40, 40]} />
-      <Suspense fallback={null}>
-        <Jumbo />
-        <OrbitControls />
-      </Suspense>
-    </Canvas>
+    <div className="home-bg">
+      <Canvas camera={{ position: [0, 0, 35] }}>
+        <ambientLight intensity={2} />
+        <pointLight position={[40, 40, 40]} />
+        <Suspense fallback={null}>
+          <Jumbo />
+          <OrbitControls />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
 
