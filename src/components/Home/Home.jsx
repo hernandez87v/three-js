@@ -1,4 +1,3 @@
-// import * as THREE from 'three';
 import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import { Html, OrbitControls } from 'drei';
@@ -27,7 +26,6 @@ function Jumbo() {
     </group>
   );
 }
-// This component was auto-generated from GLTF by: https://github.com/react-spring/gltfjsx
 
 export default function Home() {
   return (
@@ -43,23 +41,3 @@ export default function Home() {
     </div>
   );
 }
-
-// import React from 'react';
-// import './Home.css';
-
-// export default function Home() {
-//   return (
-//     <div className="home-bg">
-//       <div className="page-title">
-//         <h1 className="neumorph">
-//           <span role="img" aria-label="computer muse">
-//             🖱
-//           </span>
-//           <span role="img" aria-label="index pointing up">
-//             ☝
-//           </span>
-//         </h1>
-//       </div>
-//     </div>
-//   );
-// }
