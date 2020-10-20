@@ -1,6 +1,6 @@
 # React-Three-Fiber Demos
 
-Just followed some tutorials to make each page so I can learn 🧬 React Three Fiber. Made this site to show this 🕶 3D awesomeness.
+Just followed some tutorials to make each page so I can learn 🧬 React Three Fiber. Made this [site](https://react-three-fiber-demo.web.app/) to show this 🕶 3D awesomeness.
 
 ### 🏡 Home
 
@@ -19,6 +19,20 @@ Just followed some tutorials to make each page so I can learn 🧬 React Three F
 ![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-fiber-game.gif?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Deployed with Firebase 🔥
+
+## Dependancies used:
+
+- react
+- react-dom
+- react-router-dom
+- three
+- react-three-fiber
+- react-spring
+- three-font-outliner
+- drei
+- use-cannon
 
 ## Available Scripts
 
