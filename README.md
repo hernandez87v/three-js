@@ -1,8 +1,12 @@
-## React-Three-Fiber Game tutorial
+## React-Three-Fiber Demos
 
-![](https://github.com/hernandez87v/three-js/blob/main/public/floating-boxes.gif?raw=true)
+![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-fiber-home.gif?raw=true)
 
-![](https://github.com/hernandez87v/three-js/blob/main/public/game.gif?raw=true)
+![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-fiber-floating-boxes.gif?raw=true)
+
+![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-fiber-bunch-o-cubes.gif?raw=true)
+
+![](https://github.com/hernandez87v/three-js/blob/main/public/react-three-fiber-game.gif?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
