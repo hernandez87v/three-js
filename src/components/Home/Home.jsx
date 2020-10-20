@@ -33,7 +33,16 @@ export default function Home() {
       <Canvas camera={{ position: [0, 0, 35] }}>
         <ambientLight intensity={2} />
         <pointLight position={[40, 40, 40]} />
-        <Suspense fallback={<Html>🔃Loading...</Html>}>
+        <Suspense
+          fallback={
+            <Html>
+              <span role="img" aria-label="refresh">
+                🔃
+              </span>
+              Loading...
+            </Html>
+          }
+        >
           <Jumbo />
           <OrbitControls />
         </Suspense>
