@@ -84,10 +84,10 @@ function Instances({ material }) {
 }
 
 function Scene() {
-  const bumpMap = useTextureLoader('/bump.jpg');
+  const bumpMap = useTextureLoader('../../../build/bump.jpg');
   const envMap = useCubeTextureLoader(
     ['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png'],
-    { path: '/cube/' }
+    { path: '../../../build/cube/' }
   );
   // We use `useResource` to be able to delay rendering the spheres until the material is ready
   const [matRef, material] = useResource();
