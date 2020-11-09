@@ -11,10 +11,6 @@ export default function Navigation() {
       <nav>
         <ul className="nav__links">
           <li>
-            <Link to="/jumbo-text">JUMBO - TEXT</Link>
-          </li>
-          <span>|</span>
-          <li>
             <Link to="/floating-boxes">FLOATING - BOXES</Link>
           </li>
           <span>|</span>
@@ -24,6 +20,10 @@ export default function Navigation() {
           <span>|</span>
           <li>
             <Link to="/game">GAME</Link>
+          </li>
+          <span>|</span>
+          <li>
+            <Link to="/jumbo-text">JUMBO - TEXT</Link>
           </li>
         </ul>
       </nav>
