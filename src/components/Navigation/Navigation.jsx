@@ -11,7 +11,7 @@ export default function Navigation() {
       <nav>
         <ul className="nav__links">
           <li>
-            <Link to="/game">GAME</Link>
+            <Link to="/jumbo-text">JUMBO - TEXT</Link>
           </li>
           <span>|</span>
           <li>
@@ -23,7 +23,7 @@ export default function Navigation() {
           </li>
           <span>|</span>
           <li>
-            <Link to="/bubbles">BUBBLES</Link>
+            <Link to="/game">GAME</Link>
           </li>
         </ul>
       </nav>
