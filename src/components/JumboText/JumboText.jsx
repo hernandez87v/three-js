@@ -2,7 +2,7 @@ import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import { Html, OrbitControls } from 'drei';
 import Text from './Text';
-import './Home.css';
+import './JumboText.css';
 
 function Jumbo() {
   const ref = useRef();
@@ -27,9 +27,9 @@ function Jumbo() {
   );
 }
 
-export default function Home() {
+export default function JumboText() {
   return (
-    <div className="home-bg">
+    <div className="jumbotext-bg">
       <Canvas camera={{ position: [0, 0, 35] }}>
         <ambientLight intensity={2} />
         <pointLight position={[40, 40, 40]} />
