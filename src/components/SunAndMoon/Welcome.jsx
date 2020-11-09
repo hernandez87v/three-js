@@ -34,7 +34,7 @@ function TextMesh({ args, position }) {
                 reflectivity={1}
                 roughness={0.5}
                 metalness={1}
-                color="#ec524b"
+                color="darkgray"
                 attach="material"
             />
             <OrbitControls
