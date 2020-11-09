@@ -1,0 +1,12 @@
+.Welcome {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+Canvas {
+  background-color: #00000000;
+  z-index: 1;
+}

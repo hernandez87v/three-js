@@ -4,8 +4,8 @@ import { Canvas } from 'react-three-fiber';
 import { FontLoader } from 'three';
 import Modak from './Modak.json';
 import { OrbitControls, useTextureLoader } from 'drei';
-import sun_texture from '../SunMoon/2kSun.jpg';
-import moon_texture from '../SunMoon/2kMoon.jpg';
+import sun_texture from './2kSun.jpg';
+import moon_texture from './2kMoon.jpg';
 
 function TextMesh({ args, position }) {
   const font = new FontLoader().parse(Modak);
