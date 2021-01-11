@@ -10,7 +10,7 @@ body {
   /* overflow: hidden; */
   font-family: 'Roboto Condensed', sans-serif;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -21,7 +21,9 @@ body {
 }
 /* 3D Canvas for each page */
 canvas {
-  min-height: -webkit-fill-available;
+  height: 100vh;
+
+  /* min-height: -webkit-fill-available; */
 }
 /* Title background on each page  */
 .page-title {
