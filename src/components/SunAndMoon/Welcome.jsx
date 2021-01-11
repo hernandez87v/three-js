@@ -1,5 +1,4 @@
 import React, { Suspense, useRef, useState } from 'react';
-import './Welcome.css';
 import { Canvas } from 'react-three-fiber';
 import { FontLoader } from 'three';
 import Modak from './Modak.json';
@@ -93,10 +92,6 @@ export default function Welcome() {
                     <TextMesh args=">Web" position={[-43, -30, 0]} />
                     <TextMesh args="Developer." position={[-43, -50, 0]} />
                     <OrbitControls
-                    // enableZoom={false}
-                    // enabled={false}
-                    // autoRotate
-                    // autoRotateSpeed={0.6}
                     />
                     <Stars radius={75} count={500} />
                 </group>
