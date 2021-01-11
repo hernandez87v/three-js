@@ -22,8 +22,9 @@ body {
 /* 3D Canvas for each page */
 canvas {
   height: 100vh;
+  /* overflow: hidden; */
 
-  /* min-height: -webkit-fill-available; */
+  min-height: -webkit-fill-available;
 }
 /* Title background on each page  */
 .page-title {
